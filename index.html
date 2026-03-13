@@ -14,196 +14,266 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             line-height: 1.7;
-            color: #333;
+            color: #2d3748;
         }
         
         header {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 3rem 0;
+            padding: 4rem 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
         
         header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
         header p {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             opacity: 0.95;
             font-weight: 300;
         }
         
         nav {
-            background: #2c5282;
+            background: #5a67d8;
             padding: 0;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         nav a {
             color: white;
             text-decoration: none;
-            padding: 1rem 1.8rem;
+            padding: 1.2rem 2rem;
             display: inline-block;
-            transition: background 0.3s;
+            transition: all 0.3s;
             font-weight: 500;
+            font-size: 1.05rem;
         }
         
         nav a:hover {
-            background: #1e3a5f;
+            background: #4c51bf;
+            transform: translateY(-2px);
         }
         
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
         
+        .hero-section {
+            background: linear-gradient(135deg, #f6f8fb 0%, #e9ecef 100%);
+            padding: 4rem 2rem;
+            margin: -3rem -2rem 3rem -2rem;
+            text-align: center;
+        }
+        
+        .hero-section h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            color: #4a5568;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
         section {
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
         
         h2 {
-            color: #1e3a5f;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 3px solid #3182ce;
-            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 2rem;
+            font-size: 2.3rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
         }
         
         h3 {
-            color: #2c5282;
+            color: #5a67d8;
+            margin-top: 2.5rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
             margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
         }
         
-        .intro-section {
-            background: #f7fafc;
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-left: 5px solid #3182ce;
-            margin-bottom: 3rem;
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid #667eea;
+            transition: all 0.3s;
         }
         
-        .intro-section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+        }
+        
+        .card h3 {
+            margin-top: 0;
+            color: #667eea;
         }
         
         .pi-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-top: 4px solid #3182ce;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            margin-bottom: 3rem;
         }
         
         .pi-card h3 {
+            color: white;
+            font-size: 2rem;
             margin-top: 0;
-            color: #1e3a5f;
-            font-size: 1.8rem;
         }
         
-        .pi-info {
+        .pi-card p {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.1rem;
+        }
+        
+        .pi-card a {
+            color: #ffd700;
+            text-decoration: none;
+            border-bottom: 1px solid #ffd700;
+        }
+        
+        .pi-card a:hover {
+            color: white;
+            border-bottom-color: white;
+        }
+        
+        .team-grid {
             display: grid;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .pi-info p {
-            margin: 0.3rem 0;
-        }
-        
-        .research-areas {
-            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
         
-        .research-area {
-            background: white;
-            padding: 1.8rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            border-left: 4px solid #3182ce;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .research-area:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        
-        .research-area h3 {
-            margin-top: 0;
-            color: #2c5282;
-            font-size: 1.3rem;
-        }
-        
-        .research-area p {
-            color: #4a5568;
-            line-height: 1.7;
-        }
-        
         .team-member {
             background: white;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 6px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-            border-left: 4px solid #3182ce;
+            padding: 1.8rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
         }
         
         .team-member h4 {
-            color: #2c5282;
+            color: #5a67d8;
             margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .team-member p {
+            color: #718096;
+            margin: 0;
         }
         
         .publication {
             background: #f7fafc;
-            padding: 1.3rem;
-            margin-bottom: 1rem;
-            border-radius: 6px;
-            border-left: 3px solid #3182ce;
+            padding: 1.5rem;
+            margin-bottom: 1.2rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+        }
+        
+        .publication:hover {
+            background: #edf2f7;
+            transform: translateX(5px);
         }
         
         .publication p {
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.7;
         }
         
         .highlight-box {
-            background: #ebf8ff;
-            border-left: 4px solid #3182ce;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 4px;
+            background: linear-gradient(135deg, #fef5e7 0%, #fdebd0 100%);
+            border-left: 5px solid #f59e0b;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
+        }
+        
+        .highlight-box h3 {
+            color: #d97706;
+            margin-top: 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
         
         footer {
-            background: #1e3a5f;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
-            padding: 2.5rem 0;
-            margin-top: 4rem;
+            padding: 3rem 0;
+            margin-top: 5rem;
         }
         
         a {
-            color: #3182ce;
+            color: #667eea;
             text-decoration: none;
+            transition: color 0.3s;
         }
         
         a:hover {
+            color: #5a67d8;
             text-decoration: underline;
         }
         
@@ -214,7 +284,20 @@
         
         li {
             margin-bottom: 0.8rem;
-            line-height: 1.6;
+            line-height: 1.7;
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #718096;
+            margin-top: 0.8rem;
+            font-style: italic;
+        }
+        
+        img {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -225,239 +308,69 @@
     </header>
     
     <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#people">People</a>
-        <a href="#publications">Publications</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="contact.html">Contact</a>
     </nav>
     
     <div class="container">
-      <section id="about">
-    <h2>Welcome to Balish Lab</h2>
-    
-    <div class="intro-section">
-        <p><strong>Mycoplasmas are unusual bacteria</strong> that lack cell walls and possess the smallest genomes among independently culturable organisms. Many species are important human pathogens causing chronic infections with rising antibiotic resistance worldwide.</p>
-        
-        <!-- Biofilm Image Here -->
-        <img src="biofilm.jpg" alt="Mycoplasma pneumoniae biofilm structures" 
-             style="width: 100%; max-width: 700px; border-radius: 8px; 
-                    margin: 1.5rem auto; display: block; 
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-        <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-            <em>Mycoplasma pneumoniae biofilm structures</em>
-        </p>
-        
-        <p>Our laboratory investigates the fundamental biology of mycoplasmas to understand how these minimal organisms cause disease and persist in their hosts. This knowledge is critical for developing new therapeutic strategies to combat mycoplasma infections affecting millions of people annually.</p>
-    </div>
-            
-        
-            
-            <div class="pi-card">
-    <div style="display: grid; grid-template-columns: 150px 1fr; gap: 2rem; align-items: start;">
-        <!-- Photo - change filename to match yours -->
-        <img src="balish.jpg" alt="Dr. Mitchell Balish" 
-             style="width: 150px; height: 150px; border-radius: 8px; 
-                    object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-        
-        <!-- Info -->
-        <div>
-            <h3 style="margin-top: 0;">Mitchell F. Balish, PhD</h3>
-            <p><strong>Principal Investigator</strong></p>
-            <div class="pi-info">
-                <p>📍 Professor of Microbiology, Miami University</p>
-                <p>🎓 PhD in Biochemistry and Molecular Biology, Emory University (1998)</p>
-                <p>📧 Email: <a href="mailto:balishmf@miamioh.edu">balishmf@miamioh.edu</a></p>
-                <p>📞 Phone: (513) 529-0167</p>
-                <p>🏢 Office: 64 Pearson Hall, Oxford, OH</p>
-            </div>
+        <div class="hero-section">
+            <h2>Welcome to Our Lab</h2>
+            <p>We investigate the fundamental biology of mycoplasmas—unusual bacteria with minimal genomes that cause chronic human infections. Our research aims to develop new therapeutic strategies to combat these important pathogens.</p>
         </div>
-    </div>
-</div>
-                    <p>📍 Professor of Microbiology, Miami University</p>
-                    <p>🎓 PhD in Biochemistry and Molecular Biology</p>
-                    <p>📧 Email: <a href="mailto:balishmf@miamioh.edu">balishmf@miamioh.edu</a></p>
-                    <p>📞 Phone: (513) 529-0167</p>
-                    <p>🏢 Office: 64 Pearson Hall, Oxford, OH</p>
+        
+        <section>
+            <h2>Our Research Focus</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🔬 Structural Biology</h3>
+                    <p>Investigating attachment organelles and novel cytoskeletal proteins unique to mycoplasmas</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🦠 Biofilm Formation</h3>
+                    <p>Understanding how biofilms regulate virulence factors in chronic infections</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🧬 Host Interactions</h3>
+                    <p>Characterizing pathogen-host cell interactions from adhesion to invasion</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🔄 Cell Division</h3>
+                    <p>Exploring division mechanisms in wall-less bacteria</p>
                 </div>
             </div>
         </section>
         
-        <section id="research">
-            <h2>Research Areas</h2>
-            
-            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Graduate and undergraduate students in our lab use diverse cell biological, molecular biological, and biochemical techniques to investigate mycoplasma pathogenesis. Our research focuses on several overlapping areas:</p>
-            
-            <div class="research-areas">
-                <div class="research-area">
-                    <h3>1. Structural Features of Mycoplasma Cells</h3>
-                    <p>We study attachment organelles—prominent polar protrusions used by pathogenic species like <em>Mycoplasma pneumoniae</em> and <em>M. genitalium</em> for host cell adherence and surface motility. These structures contain novel cytoskeletal proteins unique to mycoplasmas and show convergent evolution across different species groups.</p>
-                </div>
-                
-                <div class="research-area">
-                    <h3>2. Regulation of Virulence Factor Production</h3>
-                    <p>We investigate how <em>M. pneumoniae</em> biofilms regulate virulence factors including hydrogen peroxide, hydrogen sulfide, and CARDS toxin. Understanding these regulatory mechanisms is essential for combating chronic mycoplasma disease.</p>
-                </div>
-                
-                <div class="research-area">
-                    <h3>3. Host-Pathogen Interactions</h3>
-                    <p>Different mycoplasma species interact with hosts in distinct ways—from exclusively extracellular (<em>M. pneumoniae</em>) to invasive (<em>M. penetrans</em>). We characterize these interactions to understand infection progression and identify therapeutic targets.</p>
-                </div>
-                
-                <div class="research-area">
-                    <h3>4. Cell Division Mechanisms</h3>
-                    <p>Without cell walls, mycoplasmas cannot use typical bacterial division mechanisms. We study how wall-less bacteria accomplish cell division, particularly in species lacking attachment organelles—a fundamental question in bacterial cell biology.</p>
-                </div>
+        <section>
+            <h2>Principal Investigator</h2>
+            <div class="pi-card">
+                <h3>Mitchell F. Balish, PhD</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>Professor of Microbiology</strong></p>
+                <p style="margin-bottom: 0.5rem;">📍 Miami University, Oxford, OH</p>
+                <p style="margin-bottom: 0.5rem;">🎓 PhD in Biochemistry and Molecular Biology, Emory University (1998)</p>
+                <p style="margin-bottom: 0.5rem;">📧 <a href="mailto:balishmf@miamioh.edu">balishmf@miamioh.edu</a></p>
+                <p style="margin-bottom: 0.5rem;">📞 (513) 529-0167</p>
+                <p style="margin-top: 1.5rem;">Dr. Balish leads a research program focused on mycoplasma cell biology, pathogenesis, and host interactions. His lab welcomes motivated students interested in microbiology research.</p>
             </div>
-            
+        </section>
+        
+        <section>
+            <h2>Recent Highlights</h2>
             <div class="highlight-box">
-                <h3 style="margin-top: 0;">Why This Matters</h3>
-                <p>Mycoplasma infections are highly prevalent, long-lasting, lack vaccines, and face rising antibiotic resistance. Our research aims to provide critical insights that will lead to new therapeutic agents improving the lives of millions suffering from chronic mycoplasma infections.</p>
+                <h3>Why Mycoplasmas Matter</h3>
+                <p>Mycoplasma infections are highly prevalent, long-lasting, lack vaccines, and face rising antibiotic resistance. Our research provides critical insights for developing new therapeutic agents to improve the lives of millions suffering from chronic mycoplasma infections.</p>
             </div>
         </section>
         
-    <section id="people">
-    <h2>Lab Members</h2>
-    
-    <!-- Lab Group Photo -->
-    <img src="lab-group.jpg" alt="Balish Lab Team" 
-     style="width: 100%; max-height: 500px; object-fit: cover; 
-            object-position: center top; border-radius: 8px; 
-            margin-bottom: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-    
-    <div class="pi-card" style="margin-bottom: 2rem;">
-        <!-- rest of PI card... -->
-    <div class="pi-card" style="margin-bottom: 2rem;">
-        <h3 style="margin-top: 0;">Mitchell F. Balish, PhD</h3>
-        <p><strong>Principal Investigator & Professor</strong></p>
-        <p>Dr. Balish leads a research program focused on mycoplasma cell biology, pathogenesis, and host interactions. His lab welcomes motivated students interested in microbiology research.</p>
-    </div>
-    
-    <h3>Graduate Students</h3>
-    
-    <div class="team-member">
-        <h4>Elyse Levenda</h4>
-        <p>Graduate Researcher</p>
-    </div>
-    
-    <div class="team-member">
-        <h4>Dina Fahim</h4>
-        <p>Graduate Researcher</p>
-    </div>
-    
-    <div class="team-member">
-        <h4>Kavita Shrestha</h4>
-        <p>Graduate Researcher</p>
-    </div>
-    
-    <div class="team-member">
-        <h4>Lyla Vivian</h4>
-        <p>Graduate Researcher</p>
-    </div>
-    
-    <h3>Undergraduate Researchers</h3>
-    
-    <div class="team-member">
-        <h4>Brynn Cole</h4>
-        <p>Undergraduate Researcher</p>
-    </div>
-    
-    <div class="team-member">
-        <h4>Vanessa Polster</h4>
-        <p>Undergraduate Researcher</p>
-    </div>
-    
-    <div class="team-member">
-        <h4>Nick Hargett</h4>
-        <p>Undergraduate Researcher</p>
-    </div>
-    
-    <div class="team-member">
-        <h4>Joshua Grix</h4>
-        <p>Undergraduate Researcher</p>
-    </div>
-    
-    <h3>Alumni</h3>
-    <p style="margin-top: 1rem;">Our lab has trained numerous graduate and undergraduate researchers who have gone on to successful careers in research, medicine, and biotechnology.</p>
-</section>
-            
-            <div class="pi-card" style="margin-bottom: 2rem;">
-                <h3 style="margin-top: 0;">Mitchell F. Balish, PhD</h3>
-                <p><strong>Principal Investigator & Professor</strong></p>
-                <p>Dr. Balish leads a research program focused on mycoplasma cell biology, pathogenesis, and host interactions. His lab welcomes motivated students interested in microbiology research.</p>
-            </div>
-            
-            <h3>Graduate Students</h3>
-            <div class="team-member">
-                <p><em>Information about current graduate students will be added here</em></p>
-            </div>
-            
-            <h3>Undergraduate Researchers</h3>
-            <div class="team-member">
-                <p><em>Information about current undergraduate researchers will be added here</em></p>
-            </div>
-            
-            <h3>Alumni</h3>
-            <p style="margin-top: 1rem;">Our lab has trained numerous graduate and undergraduate researchers who have gone on to successful careers in research, medicine, and biotechnology.</p>
-        </section>
-        
-        <section id="publications">
-            <h2>Selected Publications</h2>
-            
-            <h3>Recent Research Articles</h3>
-            
-            <div class="publication">
-                <p><strong>Fahim, R.A., Rodriguez, Z.E.D., Oestreicher, Z., Schwab, N.R., Young, N.E., Shrestha, K., and Balish, M.F.</strong> (2025). Eradication of <em>Mycoplasma pneumoniae</em> biofilm towers by treatment with hydrogen peroxide or antibiotic combinations acting synergistically. <em>PLoS ONE</em> 20:e0329571</p>
-            </div>
-            
-            <div class="publication">
-                <p><strong>Schwab, N.R., Young, N.E., Nzenwata, D.U., Toh, E., Mikulin, J.A., Wilson, T.J., Nelson, D.E., and Balish, M.F.</strong> (2023). Characterization of virulence-associated traits in <em>Mycoplasma penetrans</em> strains acting as likely etiological agents of idiopathic nongonococcal urethritis. <em>J. Infect. Dis.</em> 227:1050-1058</p>
-            </div>
-            
-            <div class="publication">
-                <p><strong>Feng, M., Burgess, A.C., Cuellar, R.R., Schwab, N.R., and Balish, M.F.</strong> (2021). Modeling persistent <em>Mycoplasma pneumoniae</em> biofilm infections in a submerged BEAS-2B bronchial epithelial tissue culture model. <em>J. Med. Microbiol.</em> 70:001266</p>
-            </div>
-            
-            <div class="publication">
-                <p><strong>Feng, M., Schaff, A.C., and Balish, M.F.</strong> (2020). <em>Mycoplasma pneumoniae</em> biofilms grown in vitro: traits associated with persistence and cytotoxicity. <em>Microbiology</em> 166:629-640</p>
-            </div>
-            
-            <h3 style="margin-top: 2.5rem;">Review Articles</h3>
-            
-            <div class="publication">
-                <p><strong>Waites, K.B., Xiao, L., Liu, Y., Balish, M.F., and Atkinson, T.P.</strong> (2017). <em>Mycoplasma pneumoniae</em> from the respiratory tract and beyond. <em>Clin. Microbiol. Rev.</em> 30:747-809</p>
-            </div>
-            
-            <div class="publication">
-                <p><strong>Balish, M.F., and Distelhorst, S.L.</strong> (2016). Potential molecular targets for narrow-spectrum agents to combat <em>Mycoplasma pneumoniae</em> infection and disease. <em>Front. Microbiol.</em> 7:205</p>
-            </div>
-            
-            <p style="margin-top: 2rem;"><a href="https://scholar.google.com" target="_blank">→ View complete publication list on Google Scholar</a></p>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact & Join Us</h2>
-            
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-                <div>
-                    <h3 style="margin-top: 0;">Location</h3>
-                    <p><strong>Balish Mycoplasmology Lab</strong><br>
-                    Department of Microbiology<br>
-                    Miami University<br>
-                    64 Pearson Hall<br>
-                    Oxford, OH 45056</p>
-                    
-                    <h3>Contact</h3>
-                    <p>Dr. Mitchell F. Balish<br>
-                    Email: <a href="mailto:balishmf@miamioh.edu">balishmf@miamioh.edu</a><br>
-                    Phone: (513) 529-0167</p>
-                </div>
-                
-               
-                    
-                    <p style="margin-top: 1rem;"><strong>Interested in joining?</strong> Contact Dr. Balish to discuss available opportunities.</p>
-                </div>
-            </div>
+        <section>
+            <h2>Join Our Lab</h2>
+            <p style="font-size: 1.15rem; line-height: 1.8;">We welcome motivated graduate and undergraduate students interested in microbiology research. Our lab provides hands-on experience with cutting-edge techniques in molecular biology, cell biology, and biochemistry.</p>
+            <p style="margin-top: 1.5rem; font-size: 1.1rem;"><strong>Interested in joining?</strong> <a href="contact.html">Contact Dr. Balish</a> to discuss available opportunities.</p>
         </section>
     </div>
     
